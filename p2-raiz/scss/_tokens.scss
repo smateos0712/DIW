@@ -1,0 +1,44 @@
+// _tokens.scss — 👀 los tokens de RAÍZ. Los colores SOLO se escriben aquí (Stylelint lo vigila).
+// Nivel 1 · Global: la paleta
+$green-500: #2e7d32;
+$green-800: #1b4d20;
+$green-50: #edf5ea;
+$green-300: #81c784;
+$green-200: #a5d6a7;
+$terracota-500: #b5643c;
+$terracota-300: #d9926b;
+$gray-900: #1a1a1a;
+$gray-600: #6b6b6b;
+$gray-100: #f6f4ef;
+$white: #fff;
+$night-900: #101712;
+$night-800: #1a241c;
+$night-50: #e8f0e6;
+
+// Nivel 2 · Semántico, tema claro
+$color-brand-primary: $green-500;
+$color-brand-strong: $green-800;
+$color-brand-soft: $green-50;
+$color-accent: $terracota-500;
+$color-surface: $white;
+$color-surface-alt: $gray-100;
+$color-text: $gray-900;
+$color-muted: $gray-600;
+$color-on-brand: $white;
+
+// Nivel 2 · Semántico, tema oscuro
+$dark-brand-primary: $green-300;
+$dark-brand-strong: $green-200;
+$dark-accent: $terracota-300;
+$dark-surface: $night-800;
+$dark-surface-alt: $night-900;
+$dark-text: $night-50;
+$dark-on-brand: $gray-900;
+
+// Espacios y radios
+$space-xs: 0.25rem;
+$space-sm: 0.5rem;
+$space-md: 1rem;
+$space-lg: 1.5rem;
+$space-xl: 2.5rem;
+$radius-md: 0.5rem;

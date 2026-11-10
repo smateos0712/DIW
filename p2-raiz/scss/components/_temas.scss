@@ -1,0 +1,40 @@
+// _temas.scss — ✍️ A5 · el tema claro, el oscuro y la hoja de impresión (apartado 10 de la UD4)
+@use "../tokens" as *;
+
+:root {
+  color-scheme: light dark;
+
+  --color-fondo: #{$color-surface-alt};
+  --color-superficie: #{$color-surface};
+  --color-texto: #{$color-text};
+  --color-marca: #{$color-brand-primary};
+  --color-marca-fuerte: #{$color-brand-strong};
+  --color-sobre-marca: #{$color-on-brand};
+  --color-acento: #{$color-accent};
+}
+
+@media (prefers-color-scheme: dark) {
+  :root {
+    --color-fondo: #{$dark-surface-alt};
+    --color-superficie: #{$dark-surface};
+    --color-texto: #{$dark-text};
+    --color-marca: #{$dark-brand-primary};
+    --color-marca-fuerte: #{$dark-brand-strong};
+    --color-sobre-marca: #{$dark-on-brand};
+    --color-acento: #{$dark-accent};
+  }
+}
+
+@media print {
+  .cabecera__nav,
+  .boton,
+  .boletin {
+    display: none;
+  }
+
+  :root {
+    --color-fondo: #{$white};
+    --color-superficie: #{$white};
+    --color-texto: #{$gray-900};
+  }
+}

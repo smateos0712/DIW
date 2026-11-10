@@ -1,0 +1,10 @@
+// _mixins.scss — 👀 los breakpoints, en un solo sitio (apartado 7 de la UD4)
+$bp-md: 600px; // tablet: donde se rompe NUESTRO contenido
+$bp-lg: 1000px; // escritorio
+
+// Mobile-first: siempre min-width. Uso: @include desde($bp-md) { … }
+@mixin desde($ancho) {
+  @media (min-width: $ancho) {
+    @content;
+  }
+}

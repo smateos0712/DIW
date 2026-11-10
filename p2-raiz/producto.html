@@ -1,0 +1,86 @@
+<!doctype html>
+<html lang="es">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Monstera deliciosa · RAÍZ</title>
+    <link rel="stylesheet" href="/scss/main.scss" />
+  </head>
+  <body>
+    <div class="pagina-simple">
+      <header class="cabecera">
+        <a class="cabecera__logo" href="/"><span>RAÍZ</span></a>
+        <nav class="cabecera__nav" aria-label="Principal">
+          <a href="/">Inicio</a>
+          <a href="/producto.html" aria-current="page">Monstera</a>
+          <a href="/contacto.html">Contacto</a>
+        </nav>
+      </header>
+
+      <main class="principal">
+        <div class="hueco-ficha">
+          <article class="ficha">
+            <img class="ficha__imagen" src="/tarjetas/monstera.svg" alt="" width="400" height="300" />
+            <div class="ficha__cuerpo">
+              <h1 class="ficha__nombre">Monstera deliciosa</h1>
+              <p class="ficha__texto">
+                La planta de las hojas agujereadas. De interior, con luz indirecta y un riego por semana. Llega en
+                maceta de 17 cm, en caja ventilada y con su guía de cuidados para los primeros 30 días.
+              </p>
+              <p class="ficha__precio">34,90 €</p>
+              <button class="boton boton--grande" type="button">Añadir al carrito</button>
+            </div>
+          </article>
+        </div>
+
+        <h2 class="principal__titulo">Más fotos</h2>
+        <!-- 👀 La galería ligera ya está hecha (srcset en WebP, sizes, width/height y lazy salvo la primera) -->
+        <section class="galeria" aria-label="Fotos de la monstera">
+          <img
+            class="galeria__foto"
+            src="/img/monstera-1-960.webp"
+            srcset="/img/monstera-1-480.webp 480w, /img/monstera-1-960.webp 960w"
+            sizes="(min-width: 600px) 50vw, 100vw"
+            width="1600"
+            height="1200"
+            alt="La monstera sobre una mesa de madera clara"
+          />
+          <img
+            class="galeria__foto"
+            src="/img/monstera-2-960.webp"
+            srcset="/img/monstera-2-480.webp 480w, /img/monstera-2-960.webp 960w"
+            sizes="(min-width: 600px) 50vw, 100vw"
+            width="1600"
+            height="1200"
+            alt="La monstera en una maceta blanca"
+            loading="lazy"
+          />
+          <img
+            class="galeria__foto"
+            src="/img/monstera-3-960.webp"
+            srcset="/img/monstera-3-480.webp 480w, /img/monstera-3-960.webp 960w"
+            sizes="(min-width: 600px) 50vw, 100vw"
+            width="1600"
+            height="1200"
+            alt="Una monstera joven al sol de la mañana"
+            loading="lazy"
+          />
+          <img
+            class="galeria__foto"
+            src="/img/monstera-4-960.webp"
+            srcset="/img/monstera-4-480.webp 480w, /img/monstera-4-960.webp 960w"
+            sizes="(min-width: 600px) 50vw, 100vw"
+            width="1600"
+            height="1200"
+            alt="Detalle de tres hojas grandes de monstera"
+            loading="lazy"
+          />
+        </section>
+      </main>
+
+      <footer class="pie">
+        <p>RAÍZ, vivero online · Cádiz</p>
+      </footer>
+    </div>
+  </body>
+</html>

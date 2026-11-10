@@ -1,0 +1,35 @@
+// _ficha.scss — ✍️ A3 · la ficha de una planta, que se adapta a SU HUECO (container query)
+//
+// La ficha sale dos veces: en los consejos de inicio (un hueco estrecho) y en producto.html (un hueco ancho).
+// Ahora va SIEMPRE en fila, y en los consejos se aplasta.
+// ✍️ A3.
+//    - El contenedor es .hueco-ficha (el padre), no la propia .ficha: container-type: inline-size.
+//    - Fuera de la @container: la .ficha en una columna (la foto encima del texto).
+//    - @container (min-width: …rem): dos columnas, la foto a la izquierda.
+@use "../tokens" as *;
+
+.hueco-ficha {
+  margin-bottom: $space-xl;
+}
+
+.ficha {
+  display: flex;
+  gap: $space-md;
+  overflow: hidden;
+  border-radius: $radius-md;
+  background: var(--color-superficie);
+}
+
+.ficha__cuerpo {
+  padding: $space-md;
+}
+
+.ficha__nombre {
+  margin: 0 0 $space-sm;
+}
+
+.ficha__precio {
+  font-size: 1.5rem;
+  font-weight: 700;
+  color: var(--color-marca);
+}

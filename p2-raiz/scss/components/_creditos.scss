@@ -1,0 +1,23 @@
+// _creditos.scss — la tabla de créditos (ya hecha: el ✍️ C5 está en creditos.html)
+@use "../tokens" as *;
+
+.creditos {
+  width: 100%;
+  font-size: 0.875rem;
+  border-collapse: collapse;
+  background: var(--color-superficie);
+
+  th,
+  td {
+    padding: $space-sm;
+    border-bottom: 1px solid var(--color-marca);
+    text-align: left;
+    overflow-wrap: anywhere; // las direcciones largas parten la línea en el móvil
+  }
+}
+
+.creditos__titulo {
+  padding: $space-sm 0;
+  font-weight: 700;
+  text-align: left;
+}

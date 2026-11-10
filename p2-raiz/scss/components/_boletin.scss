@@ -1,0 +1,41 @@
+// _boletin.scss — ✍️ B2 · el boletín, rehecho en BEM (antes: ids, selectores larguísimos y !important)
+@use "../tokens" as *;
+@use "../mixins" as *;
+
+.boletin {
+  margin-top: $space-xl;
+  padding: $space-lg;
+  border-radius: $radius-md;
+  background: var(--color-superficie);
+}
+
+.boletin__titulo {
+  margin-top: 0;
+  font-size: 1.25rem;
+}
+
+.boletin__formulario {
+  display: flex;
+  flex-wrap: wrap;
+  gap: $space-sm;
+  align-items: center;
+}
+
+.boletin__etiqueta {
+  flex-basis: 100%;
+  font-weight: 600;
+}
+
+.boletin__campo {
+  flex: 1 1 12rem;
+  width: 100%; // sin esto, un input no baja de su ancho «natural» (unos 250 px) y desborda el móvil
+  padding: $space-sm;
+  border: 2px solid var(--color-marca);
+  border-radius: $radius-md;
+  font: inherit;
+}
+
+.boletin__nota {
+  margin-bottom: 0;
+  font-size: 0.875rem;
+}
