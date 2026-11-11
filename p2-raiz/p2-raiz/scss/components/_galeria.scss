@@ -1,0 +1,17 @@
+// _galeria.scss — la galería de la ficha de producto (ya hecha: el ✍️ C2 está en el HTML)
+@use "../tokens" as *;
+@use "../mixins" as *;
+
+.galeria {
+  display: grid;
+  gap: $space-md;
+
+  @include desde($bp-md) {
+    grid-template-columns: 1fr 1fr;
+  }
+}
+
+.galeria__foto {
+  width: 100%;
+  border-radius: $radius-md;
+}

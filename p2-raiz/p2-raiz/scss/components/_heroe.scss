@@ -1,0 +1,36 @@
+// _heroe.scss — la portada: la foto y el texto (en móvil, debajo; desde $bp-md, encima de la foto)
+// 👀 A4 · el título fluido con clamp() (ya resuelto: te sirve de ejemplo para C1)
+@use "../tokens" as *;
+@use "../mixins" as *;
+
+.heroe {
+  position: relative;
+}
+
+.heroe__imagen {
+  width: 100%;
+  max-height: 32rem;
+  object-fit: cover; // recorta la foto en vez de deformarla
+}
+
+.heroe__texto {
+  padding: $space-lg;
+  color: var(--color-sobre-marca);
+  background: var(--color-marca-fuerte);
+
+  @include desde($bp-md) {
+    position: absolute;
+    inset: auto 0 0;
+    background: linear-gradient(transparent, var(--color-marca-fuerte));
+  }
+}
+
+.heroe__titulo {
+  margin: 0 0 $space-sm;
+  font-size: clamp(2rem, 1.25rem + 3vw, 3.5rem); // 👀 A4: crece con la pantalla entre 32 y 56 px
+  line-height: 1.1;
+}
+
+.heroe__lema {
+  margin: 0 0 $space-md;
+}

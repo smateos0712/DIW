@@ -1,0 +1,43 @@
+// _boton.scss — 👀 B0 · EJEMPLO RESUELTO de BEM: un bloque, un elemento y dos modificadores.
+//   .boton             el bloque: TODO lo común a cualquier botón
+//   .boton--grande     modificador: solo lo que cambia (el tamaño)
+//   .boton--secundario modificador: solo lo que cambia (los colores)
+// Cada selector es UNA clase: la especificidad es plana (0,1,0) y el orden de los ficheros decide.
+@use "../tokens" as *;
+
+.boton {
+  display: inline-block;
+  padding: $space-sm $space-md;
+  border: 2px solid var(--color-marca);
+  border-radius: $radius-md;
+  font: inherit;
+  font-weight: 600;
+  color: var(--color-sobre-marca);
+  text-decoration: none;
+  background: var(--color-marca);
+  cursor: pointer;
+
+  &:hover {
+    background: var(--color-marca-fuerte);
+  }
+
+  &:focus-visible {
+    outline: 3px solid var(--color-acento);
+    outline-offset: 2px;
+  }
+
+  &:disabled {
+    cursor: not-allowed;
+    opacity: 0.6;
+  }
+}
+
+.boton--grande {
+  padding: $space-md $space-lg;
+  font-size: 1.125rem;
+}
+
+.boton--secundario {
+  color: var(--color-marca);
+  background: transparent;
+}

@@ -1,0 +1,5 @@
+/* tailwind.css — la hoja de la página de contacto (solo Tailwind, sin SASS). Vite la compila con el plugin de Tailwind. */
+@import "tailwindcss";
+
+/* ✍️ B3 · Los tokens de RAÍZ en un @theme: los colores marca, marca-oscuro, marca-suave, tierra, texto y fondo,
+   con los MISMOS valores que scss/_tokens.scss. Así podrás escribir bg-marca, text-tierra… en contacto.html */

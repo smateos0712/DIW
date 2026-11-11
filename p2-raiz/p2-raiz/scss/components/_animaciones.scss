@@ -1,0 +1,45 @@
+// _animaciones.scss — ✍️ C4 · una microinteracción que no cuesta nada: solo transform y opacity
+@use "../tokens" as *;
+
+.tarjeta-planta {
+  transition: transform 200ms ease-out;
+
+  &:hover {
+    transform: translateY(-0.25rem);
+  }
+}
+
+.tarjeta-planta__boton {
+  transition: transform 120ms ease-out;
+
+  &:active {
+    transform: scale(0.96);
+  }
+}
+
+.heroe__texto {
+  animation: entrar 600ms ease-out both;
+}
+
+@keyframes entrar {
+  from {
+    opacity: 0;
+    transform: translateY(1rem);
+  }
+
+  to {
+    opacity: 1;
+    transform: none;
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .tarjeta-planta,
+  .tarjeta-planta__boton {
+    transition: none;
+  }
+
+  .heroe__texto {
+    animation: none;
+  }
+}

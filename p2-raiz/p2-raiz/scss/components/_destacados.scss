@@ -1,0 +1,23 @@
+// _destacados.scss — ✍️ A2 · la rejilla de las más vendidas, SIN media queries
+//
+// Esto es lo que había: tres saltos escritos a mano (y uno, con max-width).
+// ✍️ A2. Rehazlo para que el propio Grid decida cuántas columnas caben:
+//    repeat(auto-fit, minmax(…)), con un mínimo que no desborde un móvil de 320 px, un gap, y ninguna media query.
+@use "../tokens" as *;
+@use "../mixins" as *;
+
+.destacados {
+  display: grid;
+
+  @media (max-width: 599px) {
+    grid-template-columns: 1fr;
+  }
+
+  @include desde($bp-md) {
+    grid-template-columns: 1fr 1fr;
+  }
+
+  @include desde($bp-lg) {
+    grid-template-columns: 1fr 1fr 1fr;
+  }
+}

@@ -1,0 +1,38 @@
+// _layout.scss — ✍️ A1 · el esqueleto de la página de inicio con Grid (el relleno fluido, A4, ya está puesto)
+//
+// ✍️ A1. La .pagina tiene cinco hijos: .cabecera, .heroe, .principal, .consejos y .pie.
+//    - En móvil (sin media query): un grid con grid-template-areas, una columna, en ese orden.
+//    - Desde $bp-md: dos columnas (la del principal se estira; la de los consejos, un ancho fijo en rem).
+//      «principal consejos» comparten fila; la cabecera, el héroe y el pie ocupan las dos.
+//    - Desde $bp-lg: la página no pasa de un máximo (en rem) y se centra.
+//    - Cada hijo, su grid-area.
+@use "../tokens" as *;
+@use "../mixins" as *;
+
+.pagina {
+  min-height: 100dvh;
+}
+
+.principal {
+  padding: clamp(1rem, 0.5rem + 2vw, 2.5rem); // 👀 A4 · relleno fluido (ya resuelto)
+}
+
+.principal__titulo {
+  margin-top: 0;
+}
+
+.consejos {
+  padding: clamp(1rem, 0.5rem + 2vw, 2.5rem); // 👀 A4 · relleno fluido (ya resuelto)
+  background: var(--color-superficie);
+}
+
+.pie {
+  padding: $space-md;
+  text-align: center;
+  color: var(--color-sobre-marca);
+  background: var(--color-marca-fuerte);
+
+  a {
+    color: inherit;
+  }
+}

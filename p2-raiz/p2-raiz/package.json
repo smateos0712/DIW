@@ -1,0 +1,28 @@
+{
+  "name": "p2-raiz",
+  "private": true,
+  "version": "1.0.0",
+  "type": "module",
+  "description": "DIW · Práctica 2 · RAÍZ, vivero online (layout, arquitectura CSS y multimedia)",
+  "scripts": {
+    "dev": "vite --host 0.0.0.0",
+    "build": "vite build",
+    "comprobar": "node comprobador/comprobar.mjs",
+    "lint": "stylelint \"scss/**/*.scss\"",
+    "formato": "prettier --write \"scss/**/*.scss\" \"*.html\" \"src/**/*.css\"",
+    "formato:comprobar": "prettier --check \"scss/**/*.scss\" \"*.html\" \"src/**/*.css\"",
+    "imagenes": "node herramientas/imagenes.mjs"
+  },
+  "devDependencies": {
+    "@tailwindcss/cli": "4.3.3",
+    "@tailwindcss/vite": "4.3.3",
+    "happy-dom": "21.0.4",
+    "prettier": "3.9.10",
+    "sass": "1.106.1",
+    "sharp": "0.35.5",
+    "stylelint": "17.16.0",
+    "stylelint-config-standard-scss": "17.0.0",
+    "tailwindcss": "4.3.3",
+    "vite": "8.3.5"
+  }
+}

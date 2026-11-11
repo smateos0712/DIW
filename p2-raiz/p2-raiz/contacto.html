@@ -1,0 +1,52 @@
+<!doctype html>
+<html lang="es">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Contacto · RAÍZ</title>
+    <link rel="stylesheet" href="/src/tailwind.css" />
+  </head>
+  <body>
+    <!-- ✍️ B3 · Esta página va SOLO con Tailwind (src/tailwind.css), sin SASS. Ponle las clases de utilidad:
+         los colores de RAÍZ (del @theme), dos columnas desde md y un botón con hover: y focus-visible:.
+         Nada de valores sueltos entre corchetes ni style="". -->
+    <header>
+      <a href="/">RAÍZ</a>
+      <nav aria-label="Principal">
+        <a href="/">Inicio</a>
+        <a href="/producto.html">Monstera</a>
+        <a href="/contacto.html" aria-current="page">Contacto</a>
+      </nav>
+    </header>
+
+    <main>
+      <h1>Contacto</h1>
+
+      <div>
+        <section aria-label="Dónde estamos">
+          <h2>El vivero</h2>
+          <p>Abrimos de lunes a sábado, de 9:00 a 14:00. Si vienes en persona, te ayudamos a elegir.</p>
+          <p>Envíos gratis desde 40 €</p>
+        </section>
+
+        <form action="#">
+          <label for="nombre">
+            Nombre
+            <input id="nombre" name="nombre" autocomplete="name" required />
+          </label>
+          <label for="correo">
+            Correo
+            <input id="correo" name="correo" type="email" autocomplete="email" required />
+          </label>
+          <label for="mensaje">
+            ¿En qué te ayudamos?
+            <textarea id="mensaje" name="mensaje" rows="4" required></textarea>
+          </label>
+          <button type="submit">Enviar</button>
+        </form>
+      </div>
+    </main>
+
+    <footer>RAÍZ, vivero online · Cádiz</footer>
+  </body>
+</html>

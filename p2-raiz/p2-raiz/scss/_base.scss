@@ -1,0 +1,33 @@
+// _base.scss — 👀 ya está hecho. Usa las custom properties de _temas.scss (var(--color-…)):
+// mientras no hagas el A5, la página sale sin colores.
+@use "tokens" as *;
+
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  font-family: system-ui, sans-serif;
+  line-height: 1.5;
+  color: var(--color-texto);
+  background: var(--color-fondo);
+}
+
+img {
+  display: block;
+  max-width: 100%; // ninguna imagen más ancha que su caja
+  height: auto;
+}
+
+a {
+  color: var(--color-marca);
+}
+
+// Las páginas secundarias (producto y créditos): una columna centrada, sin Grid
+.pagina-simple {
+  max-width: 64rem;
+  margin-inline: auto;
+}

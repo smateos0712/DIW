@@ -10,15 +10,22 @@
 
 .hueco-ficha {
   margin-bottom: $space-xl;
+  container-type: inline-size;
 }
 
 .ficha {
-  display: flex;
+  display: grid;
   gap: $space-md;
   overflow: hidden;
   border-radius: $radius-md;
   background: var(--color-superficie);
 }
+@container (min-width:30rem){
+  .ficha{
+    grid-template-columns: 1fr 1fr;
+  }
+}
+
 
 .ficha__cuerpo {
   padding: $space-md;

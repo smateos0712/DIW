@@ -1,0 +1,14 @@
+// main.scss — el índice: no lleva estilos propios. El orden importa (la cascada).
+@use "base";
+@use "components/temas";
+@use "components/layout";
+@use "components/cabecera";
+@use "components/heroe";
+@use "components/destacados";
+@use "components/ficha";
+@use "components/boton";
+@use "components/tarjeta-planta";
+@use "components/boletin";
+@use "components/galeria";
+@use "components/creditos";
+@use "components/animaciones";

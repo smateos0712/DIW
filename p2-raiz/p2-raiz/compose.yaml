@@ -1,0 +1,16 @@
+# compose.yaml · el entorno de trabajo: Node, Vite, Sass, Tailwind, Stylelint y Prettier viven aquí dentro.
+# En tu ordenador no se instala nada.
+services:
+  web:
+    image: node:22-alpine     # imagen oficial de Node.js 22
+    init: true                # para que Ctrl+C y «docker compose down» paren al momento
+    working_dir: /app
+    entrypoint: ["node", "docker/como-tu.mjs"]   # cada orden se ejecuta con TU usuario (el dueño de esta carpeta)
+    environment:
+      - TZ=Europe/Madrid      # las fechas, en hora de España
+      - npm_config_update_notifier=false   # sin avisos de «actualiza npm»
+    volumes:
+      - .:/app                # tu carpeta del proyecto, dentro del contenedor
+    ports:
+      - "5173:5173"           # http://localhost:5173 → Vite
+    command: ["npm", "run", "dev"]

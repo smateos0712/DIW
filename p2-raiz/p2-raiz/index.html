@@ -1,0 +1,150 @@
+<!doctype html>
+<html lang="es">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>RAÍZ · Vivero online</title>
+    <link rel="stylesheet" href="/scss/main.scss" />
+  </head>
+  <body>
+    <div class="pagina">
+      <header class="cabecera">
+        <a class="cabecera__logo" href="/">
+          <!-- ✍️ C3 · El logo SIGNIFICA algo (es el nombre de la tienda) y el color está escrito a mano -->
+          <svg class="cabecera__marca" viewBox="0 0 32 32" width="32" height="32">
+            <path d="M16 30V14" stroke="#2e7d32" stroke-width="3" stroke-linecap="round" />
+            <path d="M16 18C8 17 4 11 5 4c7 0 11 6 11 14zM16 15c7-2 11-7 10-13-6 1-10 6-10 13z" fill="#2e7d32" />
+          </svg>
+          <span>RAÍZ</span>
+        </a>
+        <nav class="cabecera__nav" aria-label="Principal">
+          <a href="/">Inicio</a>
+          <a href="/producto.html">Monstera</a>
+          <a href="/contacto.html">Contacto</a>
+          <a class="cabecera__carrito" href="#carrito">
+            <!-- ✍️ C3 · Este icono es decorativo: el enlace ya dice «Carrito» -->
+            <svg viewBox="0 0 24 24" width="20" height="20">
+              <path
+                d="M3 4h2l2.4 10.2a1 1 0 0 0 1 .8h8.9a1 1 0 0 0 1-.7L21 8H6.2"
+                fill="none"
+                stroke="#1a1a1a"
+                stroke-width="2"
+                stroke-linecap="round"
+                stroke-linejoin="round"
+              />
+              <circle cx="9" cy="19" r="1.6" fill="#1a1a1a" />
+              <circle cx="17" cy="19" r="1.6" fill="#1a1a1a" />
+            </svg>
+            Carrito
+          </a>
+        </nav>
+      </header>
+
+      <section class="heroe" aria-label="Portada">
+        <!-- ✍️ C1 · La foto más pesada de la web, igual para un móvil que para un monitor de 27″.
+             Pásala a <picture> con AVIF, WebP y JPG en 480, 960 y 1440 px (las genera docker compose run --rm web npm run imagenes). -->
+        <img class="heroe__imagen" src="/img/heroe-1440.jpg" alt="heroe.jpg" loading="lazy" />
+        <div class="heroe__texto">
+          <h1 class="heroe__titulo">Plantas que llegan vivas a tu casa</h1>
+          <p class="heroe__lema">Caja ventilada, guía de riego y 30 días de garantía.</p>
+          <a class="boton boton--grande" href="/producto.html">Ver la monstera</a>
+        </div>
+      </section>
+
+      <main class="principal">
+        <h2 class="principal__titulo">Las más vendidas</h2>
+
+        <!-- ✍️ B1 · Cada <article> es un bloque tarjeta-planta: pon sus clases BEM (bloque, elementos, modificadores) -->
+        <section class="destacados" aria-label="Las más vendidas">
+          <article>
+            <img src="/tarjetas/monstera.svg" alt="" width="400" height="300" />
+            <h3>Monstera deliciosa</h3>
+            <p>De interior, con luz indirecta.</p>
+            <p>34,90 €</p>
+            <button type="button">Añadir al carrito</button>
+          </article>
+          <article>
+            <img src="/tarjetas/pothos.svg" alt="" width="400" height="300" />
+            <p>Oferta −20 %</p>
+            <h3>Pothos</h3>
+            <p>Casi indestructible.</p>
+            <p>10,00 €</p>
+            <button type="button">Añadir al carrito</button>
+          </article>
+          <article>
+            <img src="/tarjetas/olivo.svg" alt="" width="400" height="300" />
+            <h3>Olivo</h3>
+            <p>Para terraza o patio: aguanta el sol de agosto, el viento de levante y algún olvido de riego.</p>
+            <p>29,00 €</p>
+            <button type="button">Añadir al carrito</button>
+          </article>
+          <article>
+            <img src="/tarjetas/cactus.svg" alt="" width="400" height="300" />
+            <p>Agotada</p>
+            <h3>Pack de cactus</h3>
+            <p>Tres cactus pequeños en macetas de barro.</p>
+            <p>18,00 €</p>
+            <button type="button" disabled>Sin existencias</button>
+          </article>
+          <article>
+            <img src="/tarjetas/helecho.svg" alt="" width="400" height="300" />
+            <p>Oferta −15 %</p>
+            <h3>Helecho de Boston</h3>
+            <p>Para baños y cocinas: le encanta la humedad.</p>
+            <p>16,15 €</p>
+            <button type="button">Añadir al carrito</button>
+          </article>
+          <article>
+            <img src="/tarjetas/lavanda.svg" alt="" width="400" height="300" />
+            <h3>Lavanda</h3>
+            <p>Aromática y resistente.</p>
+            <p>7,50 €</p>
+            <button type="button">Añadir al carrito</button>
+          </article>
+        </section>
+
+        <!-- 👀 El boletín ya viene en BEM (bloque .boletin): te sirve de ejemplo para la tarjeta del B1 -->
+        <section class="boletin" aria-labelledby="boletin-titulo">
+          <h2 class="boletin__titulo" id="boletin-titulo">Un consejo de riego al mes</h2>
+          <form class="boletin__formulario" action="#">
+            <label class="boletin__etiqueta" for="boletin-correo">Tu correo</label>
+            <input
+              class="boletin__campo"
+              id="boletin-correo"
+              type="email"
+              name="correo"
+              autocomplete="email"
+              required
+            />
+            <button class="boton boletin__boton" type="submit">Apuntarme</button>
+          </form>
+          <p class="boletin__nota">Sin publicidad. Te das de baja con un clic.</p>
+        </section>
+      </main>
+
+      <aside class="consejos" aria-label="Planta del mes">
+        <h2 class="consejos__titulo">Planta del mes</h2>
+        <div class="hueco-ficha">
+          <article class="ficha">
+            <img class="ficha__imagen" src="/tarjetas/helecho.svg" alt="" width="400" height="300" />
+            <div class="ficha__cuerpo">
+              <h3 class="ficha__nombre">Helecho de Boston</h3>
+              <p class="ficha__texto">
+                En octubre, riégalo cuando la tierra esté seca al tacto y aléjalo de la calefacción.
+              </p>
+              <a class="boton boton--secundario" href="/producto.html">Ver cuidados</a>
+            </div>
+          </article>
+        </div>
+      </aside>
+
+      <footer class="pie">
+        <p>RAÍZ, vivero online · Cádiz</p>
+        <p>
+          Las fotos de RAÍZ se publican con licencias Creative Commons:
+          <a href="/creditos.html">créditos y licencias de las imágenes</a>.
+        </p>
+      </footer>
+    </div>
+  </body>
+</html>

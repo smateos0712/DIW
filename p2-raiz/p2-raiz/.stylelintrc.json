@@ -1,0 +1,21 @@
+{
+  "extends": ["stylelint-config-standard-scss"],
+  "rules": {
+    "selector-class-pattern": [
+      "^[a-z]+(-[a-z]+)*(__[a-z]+(-[a-z]+)*)?(--[a-z]+(-[a-z]+)*)?$",
+      { "message": "Las clases van en BEM: bloque, bloque__elemento o bloque--modificador (minúsculas y guiones)" }
+    ],
+    "selector-max-id": [0, { "message": "Nada de #id en el CSS: usa una clase" }],
+    "declaration-no-important": [true, { "message": "Nada de !important: arregla la especificidad" }],
+    "max-nesting-depth": [1, { "ignoreAtRules": ["include", "media"], "message": "Como mucho un nivel de anidamiento (&:hover, &__x…)" }],
+    "selector-max-compound-selectors": [2, { "message": "Selector demasiado largo: en BEM, una clase (o .bloque--mod .bloque__elem)" }],
+    "media-feature-name-disallowed-list": [["max-width"], { "message": "Mobile-first: solo min-width" }],
+    "color-no-hex": [true, { "message": "Los colores solo en _tokens.scss" }],
+    "color-named": ["never", { "message": "Los colores solo en _tokens.scss" }],
+    "declaration-property-unit-disallowed-list": [{ "width": ["px"], "min-width": ["px"] }, { "message": "Nada de anchos fijos en px: rompen el responsive" }],
+    "keyframes-name-pattern": "^[a-z]+(-[a-z]+)*$",
+    "no-descending-specificity": null,
+    "scss/dollar-variable-pattern": null
+  },
+  "overrides": [{ "files": ["scss/_tokens.scss"], "rules": { "color-no-hex": null, "color-named": null } }]
+}
